@@ -39,6 +39,15 @@ body {
     text-align: center;
 }
 
+/* Styling Tambahan untuk Logo Header */
+.header-logo {
+    width: 80px;            /* Ukuran lebar logo */
+    height: auto;           /* Mempertahankan rasio gambar */
+    margin: 0 auto 0.75rem auto; 
+    display: block;
+    object-fit: contain;
+}
+
 .header-subtitle {
     font-size: 0.75rem;
     text-transform: uppercase;
