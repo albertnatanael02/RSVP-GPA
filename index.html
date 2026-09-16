@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSVP Ulang Tahun Gereja - Berdampak</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -77,29 +78,7 @@
 
     </div>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZunaSAh82TDbvKVyze8wuTrh_AlirSr7KmpONWZNNIis3jul7LOrLgnyODbqFEGaTMA/exec'; 
-        
-        const form = document.getElementById('rsvpForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successMessage = document.getElementById('successMessage');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            submitBtn.disabled = true;
-            submitBtn.innerText = 'Mengirim...';
-
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    form.classList.add('hidden');
-                    successMessage.classList.remove('hidden');
-                })
-                .catch(error => {
-                    alert('Terjadi kesalahan saat mengunggah data!');
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = 'Kirim Konfirmasi';
-                });
-        });
-    </script>
+    <!-- Menghubungkan ke file JavaScript eksternal -->
+    <script src="script.js"></script>
 </body>
 </html>
