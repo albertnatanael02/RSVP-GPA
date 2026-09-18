@@ -12,7 +12,6 @@
         
         <!-- Header / Banner -->
         <div class="header-banner">
-            <!-- LOGO GEREJA -->
             <img src="logo.jpeg" alt="Logo Gereja GPA" class="header-logo">
 
             <p class="header-subtitle">Undangan Ulang Tahun Gereja GPA</p>
@@ -26,13 +25,12 @@
                 </div>
                 <div>
                     <span class="info-label">WAKTU</span>
-                    <span>12.00 WIB</span>
+                    <span>11.00 - 13.00 WIB</span>
                 </div>
             </div>
 
-            <!-- FOTO & NAMA PEMBICARA -->
             <div class="speaker-container">
-                <p class="speaker-title">Speaker:</p>
+                <p class="speaker-title">Pembicara / Speaker:</p>
                 <img src="pembicara.jpeg" alt="John Peter" class="speaker-image">
                 <h3 class="speaker-name">John Peter</h3>
             </div>
@@ -41,25 +39,28 @@
         <!-- Form RSVP -->
         <form id="rsvpForm" class="form-body">
             
-            <!-- Nama Lengkap -->
             <div class="form-group">
                 <label class="form-label">Nama Lengkap *</label>
                 <input type="text" name="nama" required placeholder="Masukkan nama Anda" class="form-input">
             </div>
 
-            <!-- Nomor HP / WhatsApp -->
+            <!-- Nomor HP / WhatsApp (Hanya Angka) -->
             <div class="form-group">
                 <label class="form-label">Nomor WhatsApp / HP *</label>
-                <input type="tel" name="telepon" required placeholder="08xxxxxxxxxx" class="form-input">
+                <input type="tel" 
+                    name="telepon" 
+                    required 
+                    placeholder="08xxxxxxxxxx" 
+                    class="form-input"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
 
-            <!-- Alamat Rumah -->
             <div class="form-group">
                 <label class="form-label">Alamat Rumah / Wilayah *</label>
                 <textarea name="alamat" rows="2" required placeholder="Alamat singkat atau domisili" class="form-textarea"></textarea>
             </div>
 
-            <!-- Status Kehadiran -->
             <div class="form-group">
                 <label class="form-label">Konfirmasi Kehadiran *</label>
                 <div class="radio-group">
@@ -72,7 +73,6 @@
                 </div>
             </div>
 
-            <!-- Tombol Submit -->
             <button type="submit" id="submitBtn" class="btn-submit">
                 Kirim Konfirmasi
             </button>
@@ -82,7 +82,14 @@
         <div id="successMessage" class="success-container hidden">
             <div class="success-icon">✨</div>
             <h2 class="success-title">Terima Kasih!</h2>
-            <p class="success-text">Konfirmasi Anda telah kami terima. Sampai jumpa di acara Ulang Tahun Gereja pada 27 September 2026!</p>
+            <p class="success-text">Konfirmasi Anda telah kami terima. Sampai jumpa di acara Ulang Tahun Gereja pada 27 September 2026 pukul 11.00 WIB!</p>
+            
+            <!-- TAUTAN GOOGLE CALENDAR DENGAN LOKASI GOOGLE MAPS TERINTEGRASI -->
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ulang+Tahun+Gereja+GPA+-+Berdampak&dates=20260927T040000Z/20260927T060000Z&details=Acara+Ulang+Tahun+Gereja+GPA+dengan+tema+Berdampak.+Pembicara:+John+Peter.&location=https%3A%2F%2Fmaps.app.goo.gl%2Foq3PeekVNzVQ49Re9" 
+               target="_blank" 
+               class="btn-calendar">
+               📅 Simpan ke Google Calendar
+            </a>
         </div>
 
     </div>

@@ -9,7 +9,6 @@ form.addEventListener('submit', e => {
     submitBtn.disabled = true;
     submitBtn.innerText = 'Mengirim...';
 
-    // Menggunakan URLSearchParams agar data terkirim lebih stabil ke Google Apps Script
     const formData = new URLSearchParams(new FormData(form));
 
     fetch(scriptURL, { 
